@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Stop Child Porn PH</string>
+    <string-array name="image_dialog_options">
+        <item>Take a Photo</item>
+        <item>Choose from your Gallery</item>
+        <item>Cancel</item>
+    </string-array>
 </resources>

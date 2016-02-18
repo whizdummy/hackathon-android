@@ -16,6 +16,7 @@ public class ReportUsingSMS extends AppCompatActivity {
     private EditText                    editTextReportInfo;
     private Button                      btnReport;
     private ReportSms                   report;
+    private boolean                     boolValidation = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,23 +34,40 @@ public class ReportUsingSMS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
-                String strPhoneNo = "+18044913997";
-                String strMessage = report.getStrName()+"//"+report.getStrReport();
+                validation();
+                if (!boolValidation) {
 
-                try{
+                    String strPhoneNo = "+18044913997";
+                    String strMessage = report.getStrName() + "//" + report.getStrReport();
 
-                    SmsManager smsManager = SmsManager.getDefault();
-                    smsManager.sendTextMessage(strPhoneNo, null, strMessage, null, null);
-                    Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+                    try {
+
+                        SmsManager smsManager = SmsManager.getDefault();
+                        smsManager.sendTextMessage(strPhoneNo, null, strMessage, null, null);
+                        Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
 
 
-                }catch (Exception e){
-                    Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
-                    e.printStackTrace();
+                    } catch (Exception e) {
+                        Toast.makeText(getApplicationContext(), "SMS failed, please try again.", Toast.LENGTH_LONG).show();
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    //display error message
                 }
-
             }
         });
+
+    }
+
+    private void validation(){
+
+        if (report.getStrName().length() == 0 || report.getStrName() == null){
+            boolValidation = true;
+        }
+        if (report.getStrReport().length() == 0 || report.getStrReport() == null){
+            boolValidation = true;
+        }
 
     }
 
