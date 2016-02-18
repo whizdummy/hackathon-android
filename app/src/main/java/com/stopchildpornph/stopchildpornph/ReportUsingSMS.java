@@ -14,6 +14,7 @@ public class ReportUsingSMS extends AppCompatActivity {
     private EditText                    editTextReportInfo;
     private Button                      btnReport;
     private ReportSms                   report;
+    private boolean                     boolValidation = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +32,27 @@ public class ReportUsingSMS extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
+                validation();
+                if (!boolValidation){
+
+                    //enter saving database
+
+                }else{
+                    //display error message
+                }
             }
         });
+
+    }
+
+    private void validation(){
+
+        if (report.getStrName().length() == 0 || report.getStrName() == null){
+            boolValidation = true;
+        }
+        if (report.getStrReport().length() == 0 || report.getStrReport() == null){
+            boolValidation = true;
+        }
 
     }
 

@@ -37,12 +37,20 @@ public class ReportUsingUrl extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
+                validation();
+                if (!boolValidation){
+
+                    //saving database
+
+                }else{
+                    //display error
+                }
             }
         });
 
     }
 
-    public void validation(){
+    private void validation(){
 
         String strPattern = "<\\b(https?|ftp|file)://[-a-zA-Z0-9+&@#/%?=~_|!:,.;]*[-a-zA-Z0-9+&@#/%=~_|]>";
         if (report.getStrName().length() == 0 || report.getStrName() == null){
