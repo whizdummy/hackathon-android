@@ -7,18 +7,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.stopchildpornph.stopchildpornph.ReportUsingUrl">
+    tools:context="com.stopchildpornph.stopchildpornph.ReportUsingSMS">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Name:"
-        android:id="@+id/textView"
+        android:id="@+id/textViewName"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="87dp" />
+        android:layout_marginTop="69dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -26,55 +26,36 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTextName"
-        android:layout_alignBottom="@+id/textView"
+        android:layout_alignBottom="@+id/textViewName"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Url:"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
+        android:text="Reporting Infomation:"
+        android:id="@+id/textView6"
+        android:layout_below="@+id/textViewName"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="46dp" />
+        android:layout_marginTop="42dp" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextUrl"
-        android:layout_alignBottom="@+id/textView2"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_alignRight="@+id/editTextName"
-        android:layout_alignEnd="@+id/editTextName" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Remarks:"
-        android:id="@+id/textView3"
-        android:layout_centerVertical="true"
+        android:id="@+id/editTextReportInfo"
+        android:layout_below="@+id/textView6"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextRemarks"
-        android:layout_alignTop="@+id/textView3"
-        android:layout_alignRight="@+id/editTextUrl"
-        android:layout_alignEnd="@+id/editTextUrl"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Report"
+        android:text="Send SMS Report"
         android:id="@+id/buttonReport"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/editTextRemarks"
+        android:layout_marginTop="83dp"
+        android:layout_below="@+id/editTextReportInfo"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>

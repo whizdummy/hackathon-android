@@ -6,28 +6,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import model.ReportUrl;
+import model.ReportSms;
 
-public class ReportUsingUrl extends AppCompatActivity {
+public class ReportUsingSMS extends AppCompatActivity {
 
-    private EditText                            editTextName;
-    private EditText                            editTextUrl;
-    private EditText                            editTextRemarks;
-    private Button                              btnReport;
-    private ReportUrl                           report;
+    private EditText                    editTextName;
+    private EditText                    editTextReportInfo;
+    private Button                      btnReport;
+    private ReportSms                   report;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_report_using_url);
+        setContentView(R.layout.activity_report_using_sms);
         setUp();
     }
 
     private void setUp(){
 
         editTextName = (EditText)findViewById(R.id.editTextName);
-        editTextUrl = (EditText)findViewById(R.id.editTextUrl);
-        editTextRemarks = (EditText)findViewById(R.id.editTextRemarks);
+        editTextReportInfo = (EditText)findViewById(R.id.editTextReportInfo);
         btnReport = (Button)findViewById(R.id.buttonReport);
         btnReport.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,12 +36,11 @@ public class ReportUsingUrl extends AppCompatActivity {
 
     }
 
-    public void getData(){
+    private void getData(){
 
-        report = new ReportUrl();
+        report = new ReportSms();
         report.setStrName(editTextName.getText().toString());
-        report.setStrUrl(editTextUrl.getText().toString());
-        report.setStrRemarks(editTextRemarks.getText().toString());
+        report.setStrReport(editTextReportInfo.getText().toString());
 
     }
 
