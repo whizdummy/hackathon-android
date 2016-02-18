@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".ReportUsingUrl" />
         <activity android:name=".ReportUsingImage" />
-        <activity android:name=".ReportUsingSMS"></activity>
+        <activity android:name=".ReportUsingSMS" />
+        <activity android:name=".CallRedict"></activity>
     </application>
 
 </manifest>
