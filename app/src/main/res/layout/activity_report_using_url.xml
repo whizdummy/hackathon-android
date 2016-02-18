@@ -24,16 +24,57 @@
         android:id="@+id/editTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/txtViewName"
+        android:layout_alignBottom="@id/txtViewName"
         android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:inputType="textPersonName" />
+        android:ems="10" />
 
-    <Button
-        android:id="@+id/btnSubmit"
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/editTxtName"
+        android:layout_marginTop="46dp"
+        android:text="Url:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextUrl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editTxtName"
-        android:text="Submit"
-        android:onClick="submit" />
+        android:layout_alignBottom="@id/textView2"
+        android:layout_alignEnd="@id/editTextName"
+        android:layout_alignRight="@id/editTextName"
+        android:layout_toRightOf="@id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Remarks:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextRemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/editTextUrl"
+        android:layout_alignRight="@id/editTextUrl"
+        android:layout_alignTop="@id/textView3"
+        android:layout_toEndOf="@id/textView3"
+        android:layout_toRightOf="@id/textView3" />
+
+    <Button
+        android:id="@+id/buttonReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextRemarks"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="Report" />
+
 </RelativeLayout>
