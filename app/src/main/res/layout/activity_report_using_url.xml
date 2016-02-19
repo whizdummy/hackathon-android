@@ -24,9 +24,12 @@
         android:id="@+id/editTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/txtViewName"
-        android:layout_centerHorizontal="true"
-        android:ems="10" />
+        android:ems="10"
+        android:layout_alignTop="@+id/txtViewName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/txtViewName"
+        android:layout_toEndOf="@+id/txtViewName" />
 
     <TextView
         android:id="@+id/textView2"
@@ -37,7 +40,9 @@
         android:layout_below="@id/editTxtName"
         android:layout_marginTop="46dp"
         android:text="Url:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignRight="@+id/txtViewName"
+        android:layout_alignEnd="@+id/txtViewName" />
 
     <EditText
         android:id="@+id/editTextUrl"
@@ -46,7 +51,8 @@
         android:layout_alignBottom="@id/textView2"
         android:layout_alignEnd="@id/editTextName"
         android:layout_alignRight="@id/editTextName"
-        android:layout_toRightOf="@id/textView2" />
+        android:layout_alignLeft="@+id/editTxtName"
+        android:layout_alignStart="@+id/editTxtName" />
 
     <TextView
         android:id="@+id/textView3"
@@ -61,7 +67,7 @@
     <EditText
         android:id="@+id/editTextRemarks"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_alignEnd="@id/editTextUrl"
         android:layout_alignRight="@id/editTextUrl"
         android:layout_alignTop="@id/textView3"
@@ -70,11 +76,23 @@
 
     <Button
         android:id="@+id/buttonReport"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextRemarks"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="54dp"
-        android:text="Report" />
+        android:text="Report"
+        android:textColor="#ffffff"
+        android:background="#741e1e" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Send URL"
+        android:id="@+id/textView12"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#6c2a2a" />
 
 </RelativeLayout>

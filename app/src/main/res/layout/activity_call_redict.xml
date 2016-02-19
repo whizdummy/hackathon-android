@@ -10,20 +10,49 @@
     tools:context="com.stopchildpornph.stopchildpornph.CallRedict">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:text="DSWD"
         android:id="@+id/buttonDSWD"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="178dp"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:background="#6c1616" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
         android:text="PNP"
         android:id="@+id/buttonPNP"
-        android:layout_alignTop="@+id/buttonDSWD"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginTop="89dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#6c1616"
+        android:textColor="#ffffff"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Emergency Call"
+        android:id="@+id/textView13"
+        android:textColor="#792020"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:text="DOJ"
+        android:id="@+id/buttonDOJ"
+        android:layout_marginBottom="65dp"
+        android:background="#6c1616"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/buttonDSWD"
+        android:layout_alignStart="@+id/buttonDSWD" />
 </RelativeLayout>

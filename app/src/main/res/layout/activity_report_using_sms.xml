@@ -26,8 +26,11 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:id="@+id/editTextName"
-        android:layout_alignBottom="@+id/textViewName"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignTop="@+id/textViewName"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textViewName"
+        android:layout_toEndOf="@+id/textViewName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +45,7 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:id="@+id/editTextReportInfo"
         android:layout_below="@+id/textView6"
         android:layout_alignParentLeft="true"
@@ -51,11 +54,23 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Send SMS Report"
         android:id="@+id/buttonReport"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/editTextReportInfo"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="#982b2b"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Send SMS"
+        android:id="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#782222" />
 </RelativeLayout>
